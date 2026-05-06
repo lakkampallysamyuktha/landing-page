@@ -4213,9 +4213,18 @@ p{
 .blog-container,
 .pricing-grid,
 .testimonial-grid,
-.process-container{
+.process-container,
+.stats,
+.footer-container,
+.contact-wrapper,
+.corporate-wrapper,
+.about-container{
 
-  gap:18px;
+  display:grid;
+
+  grid-template-columns:1fr;
+
+  gap:22px;
 }
 
   /* =========================================
@@ -4329,6 +4338,24 @@ p{
   grid-template-columns:1fr 1fr;
 
   gap:16px;
+}
+.stat-box{
+
+  padding:20px 12px;
+}
+
+.stat-box h1{
+
+  font-size:30px;
+}
+/*  */
+.pricing-card .about-btn{
+
+  width:100%;
+
+  text-align:center;
+
+  justify-content:center;
 }
 
   /* =========================================
