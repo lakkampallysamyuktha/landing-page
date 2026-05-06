@@ -207,42 +207,6 @@ p{
    NAVBAR
 ========================================= */
 
-/* =========================================
-   PREMIUM NAVBAR
-========================================= */
-
-.navbar{
-
-  position:fixed;
-
-  top:0;
-  left:0;
-
-  width:100%;
-
-  height:78px;
-
-  display:flex;
-
-  align-items:center;
-
-  justify-content:space-between;
-
-  padding:0 60px;
-
-  background:
-  rgba(255,255,255,0.82);
-
-  backdrop-filter:blur(16px);
-
-  z-index:9999;
-
-  border-bottom:
-  1px solid rgba(255,255,255,0.30);
-
-  box-shadow:
-  0 10px 35px rgba(15,23,42,0.05);
-}
 
 /* LOGO */
 
@@ -4051,86 +4015,45 @@ p{
 /* =========================================
    RESPONSIVE
 ========================================= */
-
 /* =========================================
-   FINAL RESPONSIVE
+   FINAL MOBILE RESPONSIVE
 ========================================= */
-
-@media(max-width:992px){
-
-  .services-grid,
-  .why-container,
-  .blog-container,
-  .process-container,
-  .footer-container,
-  .pricing-grid,
-  .testimonial-grid{
-
-    grid-template-columns:repeat(2,1fr);
-  }
-
-  .stats{
-
-    grid-template-columns:repeat(2,1fr);
-  }
-
-}
 
 @media(max-width:768px){
 
+ 
+
   body{
 
-    padding-top:70px;
-
-    overflow-x:hidden;
+    padding-top:78px;
   }
 
   section{
 
-    padding:70px 0;
-
-    overflow:hidden;
+    padding:65px 0;
   }
-
-  /* CONTAINER */
 
   .container{
 
     width:100%;
 
-    max-width:1200px;
-
-    margin:auto;
-
-    padding:0 18px;
+    padding:0 16px;
   }
 
   /* =========================================
-     MOBILE NAVBAR
+     NAVBAR
   ========================================= */
 
   .navbar{
 
     height:78px;
 
-    padding:0 18px;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:space-between;
+    padding:0 16px;
   }
-
-  /* LOGO */
 
   .logo img{
 
-    height:42px;
-
-    width:auto;
-
-    object-fit:contain;
+    height:40px;
   }
 
   /* MENU BUTTON */
@@ -4139,21 +4062,18 @@ p{
 
     display:flex;
 
-    width:46px;
-    height:46px;
-
     align-items:center;
+
     justify-content:center;
+
+    width:44px;
+    height:44px;
 
     background:#f3f4f6;
 
     border-radius:12px;
 
     font-size:22px;
-
-    cursor:pointer;
-
-    position:relative;
 
     z-index:10001;
   }
@@ -4164,35 +4084,30 @@ p{
 
     position:fixed;
 
-    top:0;
+    top:78px;
     left:-100%;
 
     width:100%;
 
-    height:100vh;
+    height:calc(100vh - 78px);
 
-    background:
-    linear-gradient(
-      135deg,
-      #020617,
-      #0f172a
-    );
+    background:#0f172a;
 
     display:flex;
 
     flex-direction:column;
 
-    justify-content:center;
-
     align-items:center;
 
-    gap:22px;
+    justify-content:flex-start;
 
-    transition:0.45s ease;
+    gap:18px;
 
-    z-index:9999;
+    padding:35px 20px;
 
-    padding:40px 20px;
+    transition:0.4s ease;
+
+    overflow-y:auto;
   }
 
   .nav-links.active{
@@ -4200,102 +4115,85 @@ p{
     left:0;
   }
 
-  /* LINKS */
-
   .nav-links a{
 
     width:100%;
 
-    max-width:280px;
+    max-width:300px;
 
-    text-align:center;
-
-    padding:16px 20px;
+    padding:15px 18px;
 
     border-radius:14px;
 
     background:
-    rgba(255,255,255,0.06);
+    rgba(255,255,255,0.05);
 
     color:white;
-
-    font-size:18px;
-
-    font-weight:500;
-
-    backdrop-filter:blur(10px);
-  }
-
-  .nav-links a::after{
-
-    display:none;
-  }
-
-  .nav-links a:hover{
-
-    background:#2563eb;
-
-    color:white;
-  }
-
-  /* LOGIN BUTTON */
-
-  .nav-links .login-btn{
-
-    background:
-    linear-gradient(
-      135deg,
-      #2563eb,
-      #4f46e5
-    );
-
-    color:white !important;
-
-    margin-top:10px;
-
-    box-shadow:
-    0 15px 35px rgba(37,99,235,0.35);
-  }
-
-  /* HERO */
-
-  .hero{
-
-    padding:120px 20px 80px;
 
     text-align:center;
 
+    font-size:16px;
+  }
+
+  .nav-links a::after{
+    display:none;
+  }
+
+  .login-btn{
+
+    margin-top:8px;
+  }
+
+  /* =========================================
+     HERO
+  ========================================= */
+
+  .hero{
+
     min-height:auto;
+
+    padding:120px 0 70px;
+
+    text-align:center;
   }
 
-  .hero-left{
+  .hero-container{
 
-    max-width:100%;
-  }
-
-  .hero-left h1{
-
-    font-size:42px;
-
-    line-height:1.15;
-
-    letter-spacing:-2px;
-  }
-
-  .hero-left p{
-
-    font-size:15px;
-
-    line-height:1.8;
-  }
-
-  /* BUTTONS */
-
-  .hero-buttons{
+    display:flex;
 
     flex-direction:column;
 
-    gap:16px;
+    gap:40px;
+  }
+
+  .hero-left,
+  .hero-right{
+
+    width:100%;
+  }
+
+.hero-left h1{
+
+  font-size:32px;
+
+  line-height:1.2;
+
+  letter-spacing:-1px;
+}
+ .hero-left p{
+
+  max-width:100%;
+
+  margin:auto auto 28px;
+}
+
+  .hero-buttons{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:14px;
   }
 
   .btn-primary,
@@ -4303,78 +4201,74 @@ p{
 
     width:100%;
 
-    text-align:center;
+    justify-content:center;
   }
 
-  /* GRID */
+  /* =========================================
+     ALL GRID LAYOUTS
+  ========================================= */
 
-  .services-grid,
-  .why-container,
-  .blog-container,
-  .process-container,
-  .stats,
-  .footer-container,
-  .contact-wrapper,
-  .pricing-grid,
-  .testimonial-grid,
-  .corporate-wrapper,
-  .about-container{
+.services-grid,
+.why-container,
+.blog-container,
+.pricing-grid,
+.testimonial-grid,
+.process-container{
 
-    grid-template-columns:1fr;
+  gap:18px;
+}
 
-    gap:22px;
+  /* =========================================
+     CARDS
+  ========================================= */
+
+ .card,
+.why-box,
+.blog-card,
+.pricing-card,
+.testimonial-card,
+.process-box{
+
+  border-radius:18px;
+}
+
+  /* =========================================
+     TITLES
+  ========================================= */
+
+  section h2,
+  .pricing-title h2,
+  .testimonial-title h2,
+  .contact-left h2,
+  .corporate-content h2{
+
+    font-size:32px;
+
+    line-height:1.2;
+
+    letter-spacing:-1px;
   }
 
-  /* MOBILE CARDS */
+  section p{
 
-  .card,
-  .why-box,
-  .blog-card,
-  .process-box,
-  .pricing-card,
-  .testimonial-card,
-  .corporate-box,
-  .info-box{
+    font-size:15px;
+  }
+
+  /* =========================================
+     ABOUT
+  ========================================= */
+
+  .about-image img,
+  .corporate-image img{
 
     width:100%;
 
-    border-radius:22px;
+    border-radius:24px;
   }
 
-  /* CARD PADDING */
-
-  .pricing-card,
-  .process-box,
-  .testimonial-card,
-  .why-box,
-  .contact-right{
-
-    padding:28px 22px;
-  }
-
-  /* TITLES */
-
-  section h2{
-
-    font-size:34px;
-
-    line-height:1.2;
-  }
-
-  .contact-left h2{
-
-    font-size:32px;
-  }
-
-  /* ABOUT + CORPORATE */
-
-  .about-container,
-  .corporate-wrapper{
-
-    gap:35px;
-  }
-
-  /* FAQ */
+  /* =========================================
+     FAQ
+  ========================================= */
 
   .faq-question{
 
@@ -4383,7 +4277,9 @@ p{
 
   .faq-question h3{
 
-    font-size:16px;
+    font-size:15px;
+
+    line-height:1.5;
   }
 
   .faq-answer{
@@ -4391,42 +4287,20 @@ p{
     padding:0 18px;
   }
 
-  /* STATS */
-
-  .stat-box h1{
-
-    font-size:38px;
-  }
-
-  /* CONTACT */
-
-  .contact-wrapper{
-
-    gap:35px;
-  }
-
-  .contact-right{
-
-    padding:28px 22px;
-  }
-
-  /* TESTIMONIAL */
+  /* =========================================
+     TESTIMONIAL
+  ========================================= */
 
   .client-info{
-
-    align-items:center;
 
     flex-direction:column;
 
     text-align:center;
   }
 
-  /* TECH */
-
-  .tech-section{
-
-    padding:60px 0 40px;
-  }
+  /* =========================================
+     TECH SECTION
+  ========================================= */
 
   .tech-track{
 
@@ -4435,7 +4309,7 @@ p{
 
   .tech-box{
 
-    min-width:145px;
+    min-width:150px;
 
     padding:20px 16px;
   }
@@ -4449,14 +4323,23 @@ p{
 
     font-size:14px;
   }
+  /* stats */
+  .stats{
 
-  /* FOOTER */
+  grid-template-columns:1fr 1fr;
+
+  gap:16px;
+}
+
+  /* =========================================
+     FOOTER
+  ========================================= */
 
   .footer{
 
-    padding:32px 20px 10px;
-
     text-align:center;
+
+    padding:40px 20px 15px;
   }
 
   .social-icons{
@@ -4464,7 +4347,9 @@ p{
     justify-content:center;
   }
 
-  /* IMAGES */
+  /* =========================================
+     IMAGES
+  ========================================= */
 
   img{
 
