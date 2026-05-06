@@ -560,6 +560,8 @@ p{
   z-index:2;
 }
 
+/* BLUE LIGHT */
+
 /* =========================================
    PREMIUM HERO LIGHT EFFECT
 ========================================= */
@@ -929,7 +931,6 @@ p{
     max-width:280px;
   }
 }
-
 /* =========================================
    ABOUT
 ========================================= */
@@ -1202,216 +1203,30 @@ p{
   gap:28px;
 }
 
-/* =========================================
-   PREMIUM SERVICE CARD
-========================================= */
-
 .card{
 
-  position:relative;
-
-  overflow:hidden;
-
-  background:
-  rgba(255,255,255,0.08);
-
-  backdrop-filter:blur(12px);
-
-  border:1px solid rgba(255,255,255,0.12);
+  background:white;
 
   padding:34px;
 
-  border-radius:24px;
+  border-radius:20px;
 
-  transition:all 0.5s ease;
+  border:1px solid #e5e7eb;
+
+  transition:0.35s ease;
 
   box-shadow:
-  0 10px 30px rgba(0,0,0,0.08);
-
-  z-index:1;
-
-  animation:floatCard 5s ease-in-out infinite;
+  0 10px 30px rgba(0,0,0,0.05);
 }
-
-/* HOVER */
 
 .card:hover{
 
-  transform:
-  translateY(-12px)
-  scale(1.02);
+  transform:translateY(-8px);
 
-  border-color:
-  rgba(0,198,255,0.5);
+  border-color:#2563eb;
 
   box-shadow:
-    0 15px 40px rgba(0,198,255,0.20),
-    0 0 25px rgba(0,198,255,0.25),
-    0 0 60px rgba(0,114,255,0.18);
-}
-.why-box,
-.blog-card,
-.process-box,
-.value-card{
-
-  position:relative;
-
-  overflow:hidden;
-
-  border-radius:24px;
-
-  transition:all 0.5s ease;
-
-  z-index:1;
-}
-
-/* HOVER EFFECT */
-
-.why-box:hover,
-.blog-card:hover,
-.process-box:hover,
-.value-card:hover{
-
-  transform:
-  translateY(-12px)
-  scale(1.02);
-
-  box-shadow:
-    0 15px 40px rgba(0,198,255,0.20),
-    0 0 25px rgba(0,198,255,0.25),
-    0 0 60px rgba(0,114,255,0.18);
-}
-
-/* SHINING LIGHT */
-
-.why-box::before,
-.blog-card::before,
-.process-box::before,
-.value-card::before{
-
-  content:"";
-
-  position:absolute;
-  pointer-events:none;
-
-  top:-50%;
-
-  left:-120%;
-
-  width:60%;
-
-  height:220%;
-
-  background:
-  linear-gradient(
-    120deg,
-    transparent,
-    rgba(255,255,255,0.12),
-    rgba(0,198,255,0.45),
-    rgba(255,255,255,0.12),
-    transparent
-  );
-
-  transform:rotate(25deg);
-
-  transition:0.9s ease;
-}
-
-.why-box:hover::before,
-.blog-card:hover::before,
-.process-box:hover::before,
-.value-card:hover::before{
-
-  left:130%;
-}
-
-/* SHINING LIGHT */
-
-.card::before{
-
-  content:"";
-
-  position:absolute;
-  pointer-events:none;
-
-  top:-50%;
-
-  left:-120%;
-
-  width:60%;
-
-  height:220%;
-
-  background:
-  linear-gradient(
-    120deg,
-    transparent,
-    rgba(255,255,255,0.12),
-    rgba(0,198,255,0.45),
-    rgba(255,255,255,0.12),
-    transparent
-  );
-
-  transform:rotate(25deg);
-
-  transition:0.9s ease;
-}
-
-/* SHINE MOVE */
-
-.card:hover::before{
-
-  left:130%;
-}
-
-/* GLOW BORDER */
-
-.card::after{
-
-  content:"";
-
-  position:absolute;
-
-  inset:0;
-
-  border-radius:24px;
-
-  padding:1px;
-
-  background:
-  linear-gradient(
-    135deg,
-    rgba(0,198,255,0.7),
-    transparent,
-    rgba(0,114,255,0.7)
-  );
--webkit-mask:
-    linear-gradient(#fff 0 0) content-box,
-    linear-gradient(#fff 0 0);
-
--webkit-mask-composite:xor;
-
-  opacity:0;
-
-  transition:0.5s ease;
-}
-
-.card:hover::after{
-
-  opacity:1;
-}
-
-/* FLOATING */
-
-@keyframes floatCard{
-
-  0%,100%{
-    transform:translateY(0px);
-  }
-
-  50%{
-    transform:translateY(-6px);
-  }
+  0 22px 45px rgba(0,0,0,0.10);
 }
 
 /* ICON */
@@ -1503,7 +1318,9 @@ p{
   0 10px 30px rgba(0,0,0,0.05);
 }
 
-
+.why-box:hover{
+  transform:translateY(-8px);
+}
 
 .why-box i{
 
@@ -1613,7 +1430,9 @@ p{
   0 10px 30px rgba(0,0,0,0.05);
 }
 
-
+.process-box:hover{
+  transform:translateY(-8px);
+}
 
 .process-number{
 
@@ -1835,6 +1654,10 @@ p{
 
   box-shadow:
   0 10px 30px rgba(0,0,0,0.05);
+}
+
+.blog-card:hover{
+  transform:translateY(-8px);
 }
 
 .blog-img{
