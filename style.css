@@ -3736,17 +3736,9 @@ color:white;
 
 .footer-logo{
 
-  width:260px;
+  width:180px;
 
   margin-bottom:18px;
-}
-@media(max-width:768px){
-
-  .footer-logo{
-
-    width:180px;
-  }
-
 }
 
 /* =========================================
