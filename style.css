@@ -4266,9 +4266,9 @@ color:white;
   position:fixed;
 
   top:78px;
-  left:-100%;
+ left:-100vw;
 
-  width:100%;
+width:100vw;
 
   height:calc(100vh - 78px);
 
@@ -4938,70 +4938,50 @@ body{
   overflow-x:hidden;
 }
 
-*{
+/* FINAL MOBILE OVERFLOW FIX */
 
-  word-wrap:break-word;
-
-  overflow-wrap:break-word;
-}
-
-@media(max-width:768px){
-
-  .hero{
-
-    overflow:hidden;
-  }
-
-  .hero-slide{
-
-    background-position:center center;
-  }
-
-  .hero-left{
-
-    padding:0 4px;
-  }
-
-  .hero-buttons{
-
-    width:100%;
-  }
-
-  .tech-track{
-
-    animation-duration:40s;
-  }
-
-}
 @media(max-width:768px){
 
   html,
   body{
 
-    position:relative;
+    width:100%;
 
     overflow-x:hidden;
   }
 
-  .contact-section{
+  *{
+
+    max-width:100%;
+  }
+
+  .container{
 
     overflow:hidden;
   }
 
-  .contact-right{
+  .card:hover,
+  .why-box:hover,
+  .blog-card:hover,
+  .pricing-card:hover,
+  .process-box:hover,
+  .testimonial-card:hover,
+  .corporate-box:hover,
+  .info-box:hover,
+  .mini-stat:hover,
+  .btn-primary:hover,
+  .btn-outline:hover,
+  .about-btn:hover,
+  .contact-btn:hover,
+  .login-btn:hover{
 
-    overflow:hidden;
+    transform:none !important;
   }
 
   .input-group input,
   .input-group textarea{
 
-    font-size:16px;
-  }
-
-  .contact-btn:hover{
-
-    transform:none;
+    font-size:16px !important;
   }
 
 }
