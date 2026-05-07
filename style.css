@@ -10,6 +10,7 @@
   margin:0;
   padding:0;
   box-sizing:border-box;
+   
 
    
 }
@@ -3737,11 +3738,7 @@ color:white;
 
   width:260px;
 
-  height:auto;
-
-  object-fit:contain;
-
-  margin-bottom:22px;
+  margin-bottom:18px;
 }
 
 /* =========================================
