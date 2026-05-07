@@ -3589,11 +3589,11 @@ color:white;
 
 .contact-btn{
 
-  width:fit-content;
+  display:block;
 
-  border:none;
+  width:100%;
 
-  padding:18px 42px;
+ padding:14px;
 
   border-radius:16px;
 
@@ -3610,29 +3610,15 @@ color:white;
 
   font-weight:600;
 
-  cursor:pointer;
+  text-align:center;
+
+  text-decoration:none;
 
   transition:0.35s ease;
 
   box-shadow:
   0 15px 35px rgba(37,99,235,0.20);
-
-  display:flex;
-
-  align-items:center;
-
-  justify-content:center;
-
-  text-decoration:none;
-
-  margin-top:10px;
-
-  margin-left:auto;
-
-  margin-right:auto;
 }
-
-/* HOVER */
 
 .contact-btn:hover{
 
