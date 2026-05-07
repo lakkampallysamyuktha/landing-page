@@ -3735,9 +3735,13 @@ color:white;
 
 .footer-logo{
 
-  width:135px;
+  width:260px;
 
-  margin-bottom:18px;
+  height:auto;
+
+  object-fit:contain;
+
+  margin-bottom:22px;
 }
 
 /* =========================================
